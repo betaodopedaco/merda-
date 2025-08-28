@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Premium - Magnológica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header premium -->
+    <section class="premium-header">
+        <div class="decorative-element circle-1"></div>
+        <div class="decorative-element circle-2"></div>
+        <div class="header-content">
+            <h1 class="premium-title">AUTONOMIA E RESULTADOS MENSURÁVEIS</h1>
+            <p class="premium-subtitle">Controle total e dados em tempo real para impulsionar seu crescimento</p>
+        </div>
+    </section>
+    
+    <!-- Dashboard Premium -->
+    <section class="premium-dashboard">
+        <div class="dashboard-container">
+            <!-- Card de Visibilidade (azul) -->
+            <div class="dashboard-card">
+                <h2 class="dashboard-title">Visibilidade e Alcance</h2>
+                <div class="chart-wrapper">
+                    <canvas id="visibilityChart"></canvas>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">16.5K</div>
+                        <div class="metric-label">Visualizações</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">87%</div>
+                        <div class="metric-label">Aumento em 6 meses</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">4.2K</div>
+                        <div class="metric-label">Novos visitantes</div>
+                    </div>
+                    <div class="metric-card return-rate">
+                        <div class="metric-value">32%</div>
+                        <div class="metric-label">Taxa de retorno</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card de Conversão (verde) -->
+            <div class="dashboard-card conversion-card">
+                <h2 class="dashboard-title">Conversão e Engajamento</h2>
+                <div class="chart-wrapper">
+                    <canvas id="conversionChart"></canvas>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">310</div>
+                        <div class="metric-label">Leads qualificados</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">196%</div>
+                        <div class="metric-label">Crescimento</div>
+                    </div>
+                    <div class="metric-card conversion-rate">
+                        <div class="metric-value">42%</div>
+                        <div class="metric-label">Taxa de conversão</div>
+                    </div>
+                    <div class="metric-card response-time">
+                        <div class="metric-value">24h</div>
+                        <div class="metric-label">Tempo médio resposta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção de Controle -->
+    <section class="control-section">
+        <div class="control-container">
+            <!-- Card de Dados (verde) -->
+            <div class="control-card">
+                <div class="control-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="control-title">Controle Total dos Dados</h3>
+                <p class="control-text">
+                    Acesso completo e em tempo real a todas as métricas de performance. 
+                    Com nosso dashboard intuitivo, você monitora cada aspecto do crescimento 
+                    do seu negócio de qualquer lugar, a qualquer momento.
+                </p>
+            </div>
+            
+            <!-- Card de Autonomia (amarelo) -->
+            <div class="control-card">
+                <div class="control-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="control-title">Aplicativo de Gestão</h3>
+                <p class="control-text">
+                    Em breve, você terá acesso exclusivo ao nosso aplicativo de gestão integrada, 
+                    projetado para dar controle total sobre o seu negócio.
+                </p>
+                
+                <div class="app-preview">
+                    <div class="app-title">Prévia do Aplicativo Magnológica</div>
+                    <p class="control-text">
+                        Monitoramento financeiro, análise de campanhas e gestão de recursos - 
+                        tudo integrado em uma única plataforma.
+                    </p>
+                    
+                    <div class="app-features">
+                        <span class="app-feature">Dashboard Financeiro</span>
+                        <span class="app-feature">Análise de ROI</span>
+                        <span class="app-feature">Alertas Inteligentes</span>
+                        <span class="app-feature">Relatórios Automáticos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chamada para Ação -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Assuma o controle do seu sucesso digital</h2>
+            <p class="cta-subtitle">Com autonomia total e dados em tempo real, você toma decisões estratégicas baseadas em resultados concretos</p>
+            <a href="#" class="cta-button">QUERO O CONTROLE TOTAL AGORA</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
