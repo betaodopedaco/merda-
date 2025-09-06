@@ -133,6 +133,108 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        // Script para ativar as animações de fade-in ao rolar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            function checkFade() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            // Verificar na carga inicial
+            checkFade();
+            
+            // Verificar durante a rolagem
+            window.addEventListener('scroll', checkFade);
+        });
+
+        // Script para os gráficos (apenas placeholder - você precisará implementar os gráficos reais)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gráfico de visibilidade
+            const visibilityCtx = document.getElementById('visibilityChart').getContext('2d');
+            new Chart(visibilityCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                    datasets: [{
+                        label: 'Visualizações',
+                        data: [5000, 8000, 12000, 10000, 14000, 16500],
+                        borderColor: '#D4AF37',
+                        tension: 0.3,
+                        fill: true,
+                        backgroundColor: 'rgba(212, 175, 55, 0.1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de conversão
+            const conversionCtx = document.getElementById('conversionChart').getContext('2d');
+            new Chart(conversionCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                    datasets: [{
+                        label: 'Leads',
+                        data: [50, 80, 120, 180, 250, 310],
+                        backgroundColor: 'rgba(212, 175, 55, 0.7)',
+                        borderColor: '#D4AF37',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
